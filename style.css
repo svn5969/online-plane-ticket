@@ -121,3 +121,25 @@ a.active {
   display: flex;
   justify-content: space-between;
 }
+#booking-message {
+  display: none;
+
+  color: rgb(197, 241, 76);
+  font-size: 20px;
+}
+.book-message h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 40px;
+  color: rgb(243, 92, 72);
+}
+.plus-minus-btn :hover {
+  background-color: rgb(232, 246, 233);
+  cursor: pointer;
+  border-radius: 40%;
+}
+#booking {
+  cursor: pointer;
+}
+#minus {
+  font-size: 50px;
+}

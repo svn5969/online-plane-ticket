@@ -28,7 +28,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
-        <div class="booking-form">
+        <div id="booking-area" class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -55,8 +55,8 @@
                 </div>
                 <div class="plus-minus-btn">
 
-                    <p><span onclick=" ticketHandle('first',true)">+</span> </p>
-                    <p><span onclick=" ticketHandle('first',false)">-</span> </p>
+                    <p id="plus"><span onclick=" ticketHandle('first',true)">+</span> </p>
+                    <p id="minus"><span onclick=" ticketHandle('first',false)">-</span> </p>
 
                 </div>
                 <h5 id="first-price">$0</h5>
@@ -69,8 +69,8 @@
                 </div>
                 <div class="plus-minus-btn">
 
-                    <p><span onclick=" ticketHandle('economy',true)">+</span> </p>
-                    <p><span onclick=" ticketHandle('economy',false)">-</span> </p>
+                    <p id="plus"><span onclick=" ticketHandle('economy',true)">+</span> </p>
+                    <p id="minus"><span onclick=" ticketHandle('economy',false)">-</span> </p>
 
                 </div>
                 <h5 id="economy-price">$0</h5>
@@ -103,9 +103,13 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking" class="btn-style">Book Now</button>
         </div>
 
+        <div class="book-message" id="booking-message">
+            <h1>You Are Successfully Done Your Booking</h1>
+            <h2>............Happy Journey.............</h2>
+        </div>
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
@@ -162,6 +166,15 @@
                 const ticketCount = parseInt(ticketInput.value)
                 return ticketCount
             }
+
+            const bookingBtn = document.getElementById('booking')
+            bookingBtn.addEventListener('click', function () {
+                const bookArea = document.getElementById('booking-area')
+                bookArea.style.display = "none"
+                const bookMessage = document.getElementById('booking-message')
+                bookMessage.style.display = "block"
+
+            })
 
 
             // function ticketHandle(isIncrease) {
